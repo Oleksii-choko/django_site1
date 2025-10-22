@@ -3,3 +3,24 @@
 {% block title %}
 {{ title }}
 {% endblock title %}
+
+    {% block main %}
+    <main>
+    <!-- Modal -->
+    {% include 'components/_modal.html' %}
+
+    <!-- Start Banner Hero -->
+    {% include 'components/_banner_hero.html' %}
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Categories of The Month -->
+    {% include 'components/_categories_of_the_month.html' %}
+    <!-- End Categories of The Month -->
+
+
+    <!-- Start Featured Product -->
+    {% include 'components/_featured_product.html' %}
+    <!-- End Featured Product -->
+    </main>
+    {% endblock main %}

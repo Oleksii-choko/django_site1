@@ -1,0 +1,21 @@
+{% load static %}
+<section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Категории месяца</h1>
+                <p>
+                    Топ-категории месяца — всё самое актуальное и желанное здесь и сейчас. Выбирайте хиты и экономьте время на поиске лучшего.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- 3 category -->
+            {% for category in categories %}
+                <div class="col-12 col-md-4 p-5 mt-3">
+                        <a href="{{ category.get_absolute_url }}"><img src="{{ category.get_parent_category_photo }}" class="rounded-circle img-fluid border"></a>
+                        <h5 class="text-center mt-3 mb-3">{{ category }}</h5>
+                        <p class="text-center"><a class="btn btn-success">Перейти</a></p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>

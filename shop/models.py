@@ -11,13 +11,20 @@ class Category(models.Model):
                                verbose_name="Категория", related_name='subcategory')
 
     def get_absolute_url(self):
-        ...
+        """Ссылка на категорию"""
+        return reverse('category_detail', kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.title
 
     def __repr__(self):
         return f'Категория: pk={self.pk}, title={self.title}'
+
+    def get_parent_category_photo(self):    #щоб діставав фото категорій
+        if self.image:
+            return self.image.url
+        else:
+            return 'https://placehold.co/600x400/EEEEEE/222222?text=No+Image'
 
     class Meta:
         verbose_name = 'Категория'
@@ -45,6 +52,13 @@ class Product(models.Model):
 
     def __repr__(self):
         return f'Товар: pk={self.pk}, title={self.title}, price={self.price}'
+
+    def get_first_photo(self):    #щоб діставав фото категорій
+        if self.images.first():
+            return self.images.first().image.url
+        else:
+            return 'https://placehold.co/600x400/EEEEEE/222222?text=No+Image'
+
 
     class Meta:
         verbose_name = 'Продукт'

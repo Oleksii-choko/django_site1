@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 {{ title }}
@@ -10,17 +11,17 @@
     {% include 'components/_modal.html' %}
 
     <!-- Start Banner Hero -->
-    {% include 'components/_banner_hero.html' %}
+    {% include 'shop/components/_banner.html' %}
     <!-- End Banner Hero -->
 
 
     <!-- Start Categories of The Month -->
-    {% include 'components/_categories_of_the_month.html' %}
+        {% include 'shop/components/_top_category.html' %}
     <!-- End Categories of The Month -->
 
 
     <!-- Start Featured Product -->
-    {% include 'components/_featured_product.html' %}
+        {% include 'shop/components/_featured_prod.html' %}
     <!-- End Featured Product -->
     </main>
     {% endblock main %}

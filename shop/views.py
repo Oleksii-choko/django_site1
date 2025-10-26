@@ -54,3 +54,10 @@ class SubCategories(ListView):
         context['category'] = parent_category
         context['title'] = parent_category.title
         return context
+
+def about_us(request):
+    """Страница про нас"""
+    context = {
+        'title': 'Про нас'
+    }
+    return render(request, 'shop/about.html', context)

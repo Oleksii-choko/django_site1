@@ -1,0 +1,11 @@
+<section class="py-5">
+        <div class="container">
+            <div class="row text-left p-2 pb-3">
+                <h4>Рекомендованые товары</h4>
+            </div>
+            <!--Start Carousel Wrapper-->
+            {% for product in products %}
+            {% include 'shop/components/_productcard.html'%}
+            {% endfor %}
+        </div>
+    </section>

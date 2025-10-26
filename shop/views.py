@@ -61,3 +61,19 @@ def about_us(request):
         'title': 'Про нас'
     }
     return render(request, 'shop/about.html', context)
+
+class ProductPage(DetailView):
+    """Вывод товара на отдельной странице"""
+    model = Product
+    context_object_name = 'product'
+    template_name = 'shop/shop-single.html'
+
+    def get_context_data(self, **kwargs):
+        """Вывод дополнительных элементов"""
+        context = super().get_context_data()
+        product = Product.objects.get(slug=self.kwargs['slug'])
+        context['title'] = product.title
+        # products = Product.objects.filter(category=product.category)
+        products = Product.objects.all().exclude(slug=self.kwargs['slug']).filter(category=product.category)[:5]
+        context['products'] = products
+        return context

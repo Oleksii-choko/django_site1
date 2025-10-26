@@ -14,14 +14,15 @@
         <div class="row">
             <!-- Side Filter -->
           <div class="col-lg-3">
-                <h1 class="h2 pb-4">Категории</h1>
+                <h1 class="h2 pb-4">Фильтры</h1>
             {% include 'shop/components/_sort.html'%}
           </div>
             <div class="col-lg-9">
                 <!-- Filter 2 type -->
                     <!-- Card of Product -->
+                <div class="row">
                     {% for product in products %}
-                    <div class="col-md-4">
+                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="{{ product.get_first_photo }}">
@@ -57,8 +58,11 @@
                                 <p class="text-center mb-0">{{ product.price }} UAH</p>
                             </div>
                         </div>
+
                     </div>
                     {% endfor %}
+                </div>
+
 
                 </div>
               <!-- Move by product page -->

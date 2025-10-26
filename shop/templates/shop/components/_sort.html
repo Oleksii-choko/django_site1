@@ -1,12 +1,32 @@
- <ul class="list-unstyled templatemo-accordion">
+{% load shop_tags %}
+{% get_subcategories category as categories %}
+{% get_sorted as data %}
+
+<ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Gender
+                            Подкатегория: {{ category }}
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Men</a></li>
-                            <li><a class="text-decoration-none" href="#">Women</a></li>
+                            {% for category in categories %}
+                            <li><a class="text-decoration-none" href="?type={{ category.slug}}">{{category}}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>
+{% for key in data %}
+<ul class="list-unstyled templatemo-accordion">
+                    <li class="pb-3">
+                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                            Фильтрация: {{ key.title }}
+                            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+                        </a>
+                        <ul class="collapse show list-unstyled pl-3">
+                            {% for sorter in key.sorters %}
+                            <li><a class="text-decoration-none" href="?sort={{ sorter.0 }}">{{sorter.1}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+{% endfor %}

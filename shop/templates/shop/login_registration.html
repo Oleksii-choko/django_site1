@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+<main>
+    {% if messages %}
+    <div class="container">
+        {% for message in messages %}
+        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="container py-5">
+        <div class="row g-4 align-items-start">
+            <div class="col-12 col-lg-5">
+                <div class="card shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <h3 class="h4 mb-4">Войти в аккаунт</h3>
+                        {% if login_form.non_field_errors %}
+                        <div class="alert alert-danger mb-3">
+                            {{ login_form.non_field_errors|striptags }}
+                        </div>
+                        {% endif %}
+                        <form action="{% url 'user_login'%}" class="login-form" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ login_form.username.id_for_label }}">Имя
+                                    пользователя</label>
+                                {{ login_form.username }}
+                                {% if login_form.username.errors %}
+                                <div class="invalid-feedback d-block">{{ login_form.username.errors|striptags }}</div>
+                                {% endif %}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ login_form.password.id_for_label }}">Пароль</label>
+                                {{ login_form.password }}
+                                {% if login_form.password.errors %}
+                                <div class="invalid-feedback d-block">{{ login_form.password.errors|striptags }}</div>
+                                {% endif %}
+                            </div>
+
+                            <button class="btn btn-success w-100 mt-3" type="submit">Войти</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-1">
+                <div class="card shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <h3 class="h4 mb-4">Создать аккаунт</h3>
+
+                        {% if registration_form.non_field_errors %}
+                        <div class="alert alert-danger mb-3">
+                            {{ registration_form.non_field_errors|striptags }}
+                        </div>
+                        {% endif %}
+
+                        <form action="{% url 'user_registration'%}" class="login-form" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            {# аккуратно рендерим поля и ошибки #}
+                            {% for field in registration_form %}
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.errors %}
+                                <div class="invalid-feedback d-block">{{ field.errors|striptags }}</div>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+
+                            <button class="btn btn-primary w-100" type="submit">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<style>
+    /* лёгкая косметика */
+    .card { border: 0; }
+    .card .form-control { border-radius: 12px; }
+    .card .btn { border-radius: 12px; }
+</style>
+{% endblock main %}

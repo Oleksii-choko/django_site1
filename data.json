@@ -1,0 +1,1629 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "shop",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "shop",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "shop",
+        "model": "gallery"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xcj0kp9l2g1dljhnbrj8b1lroa3ct2zf",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAgMKBL956BzAxTqRqalHbVeHdt0oVu_3vvbyrjutS8dpnzWNRFWXX63Qj5KW0H5YHtPmme2jKPpHdFH7Tr21TkdT3cv4OKvX5rH5FNArScvDPEQcwQIoCzThhc8udAhsU7ihKLFQwCQJwwCQzoRb0_17Y4MA:1vDjzr:-29_RtwUPLaId8lVLmqIv7ny0Y_FTeOF43MNfyBzgAk",
+        "expire_date": "2025-11-11T13:44:23.993Z"
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+        "title": "Часы",
+        "image": "categories/category_img_01.jpg",
+        "slug": "chasy",
+        "parent": null
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+        "title": "Механические",
+        "image": "",
+        "slug": "mehanicheskie-chasy",
+        "parent": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+        "title": "Електронные",
+        "image": "",
+        "slug": "elektronnye",
+        "parent": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 11,
+    "fields": {
+        "title": "Аксесуары",
+        "image": "categories/category_img_03.jpg",
+        "slug": "aksesuary",
+        "parent": null
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 12,
+    "fields": {
+        "title": "Обувь",
+        "image": "categories/category_img_02.jpg",
+        "slug": "obuv",
+        "parent": null
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 13,
+    "fields": {
+        "title": "Очки",
+        "image": "",
+        "slug": "ochki",
+        "parent": 11
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 14,
+    "fields": {
+        "title": "Фотоапарат",
+        "image": "",
+        "slug": "fotoaparat",
+        "parent": 11
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+        "title": "Часы наручные Longines",
+        "price": 1500.0,
+        "created_at": "2025-10-22T14:16:56.380Z",
+        "watched": 0,
+        "quantity": 23,
+        "description": "Цей годинник Longines HydroConquest являє собою стильне спортивне видання з чоловічим дизайном. Корпус з нержавіючої сталі з діаметром 44 мм і сапфірове скло захищені від води до 300 метрів. Синій циферблат оформлений арабськими цифрами та індексами, а також індикацією дати. Кварцовий механізм і браслет з нержавіючої сталі роблять цей годинник надійним і зручним у використанні. Гарантія 24 місяці.",
+        "info": "Гарантійний термін на продукцію складає 6, 12 чи 24 місяці з дня продажу.\r\nГарантія дійсна у разі пред'явлення правильно заповненого гарантійного талона, товарного чека, повної комплектації виробу, включаючи коробку, паспорт, інструкцію користувача та дефектного вироба.\r\nГарантія поширюється на недоліки виробу, що виникли з вини виробника.\r\nТермін усунення недоліків виробу визначається сервісним центром індивідуально та становить не більше 45 днів. Гарантійний строк продовжується на час перебування виробу в ремонті.",
+        "category": 3,
+        "slug": "chasy-naruchnye-longines",
+        "size": 200,
+        "color": "Красный"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+        "title": "Очки dirol",
+        "price": 700.0,
+        "created_at": "2025-10-24T12:59:20.601Z",
+        "watched": 0,
+        "quantity": 22,
+        "description": "Здесь скоро будет описание...ff",
+        "info": "Дополнительная Информация о продуктеff",
+        "category": 11,
+        "slug": "ochki-dirol",
+        "size": 50,
+        "color": "Коричневый"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+        "title": "Фотоапарат Sony",
+        "price": 2300.0,
+        "created_at": "2025-10-24T13:01:08.390Z",
+        "watched": 0,
+        "quantity": 45,
+        "description": "Здесь скоро будет описание...",
+        "info": "Дополнительная Информация о продукте",
+        "category": 14,
+        "slug": "fotoaparat-sony",
+        "size": 300,
+        "color": "Серебро"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+        "title": "Часы наручные Logan 1",
+        "price": 1200.0,
+        "created_at": "2025-10-25T15:04:26.606Z",
+        "watched": 0,
+        "quantity": 12,
+        "description": "Здесь скоро будет описание...1",
+        "info": "Дополнительная Информация о продукте1",
+        "category": 2,
+        "slug": "chasy-naruchnye-logan-1",
+        "size": 200,
+        "color": "Серебро"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+        "title": "Часы наручные Logan 2",
+        "price": 2000.0,
+        "created_at": "2025-10-25T15:04:46.365Z",
+        "watched": 0,
+        "quantity": 0,
+        "description": "Здесь скоро будет описание...2",
+        "info": "Дополнительная Информация о продукте2",
+        "category": 2,
+        "slug": "chasy-naruchnye-logan-2",
+        "size": 200,
+        "color": "Серебро"
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+        "title": "Часы наручные Logan 3",
+        "price": 120.0,
+        "created_at": "2025-10-25T15:05:16.931Z",
+        "watched": 0,
+        "quantity": 13,
+        "description": "Здесь скоро будет описание...3",
+        "info": "Дополнительная Информация о продукте3",
+        "category": 3,
+        "slug": "chasy-naruchnye-logan-3",
+        "size": 200,
+        "color": "Серебро"
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 1,
+    "fields": {
+        "image": "products/feature_prod_02.jpg",
+        "product": 1
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 2,
+    "fields": {
+        "image": "products/shop_01.jpg",
+        "product": 2
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 3,
+    "fields": {
+        "image": "products/feature_prod_03.jpg",
+        "product": 3
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 4,
+    "fields": {
+        "image": "products/product_single_03.jpg",
+        "product": 5
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 5,
+    "fields": {
+        "image": "products/product_single_09.jpg",
+        "product": 6
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 6,
+    "fields": {
+        "image": "products/product_single_05.jpg",
+        "product": 5
+    }
+},
+{
+    "model": "shop.gallery",
+    "pk": 7,
+    "fields": {
+        "image": "products/product_single_04.jpg",
+        "product": 5
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Категория",
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Категория",
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Категория",
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Категория",
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Продукт",
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Продукт",
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Продукт",
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Продукт",
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Изображение",
+        "content_type": [
+            "shop",
+            "gallery"
+        ],
+        "codename": "add_gallery"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Изображение",
+        "content_type": [
+            "shop",
+            "gallery"
+        ],
+        "codename": "change_gallery"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Изображение",
+        "content_type": [
+            "shop",
+            "gallery"
+        ],
+        "codename": "delete_gallery"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Изображение",
+        "content_type": [
+            "shop",
+            "gallery"
+        ],
+        "codename": "view_gallery"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$cfwRZSwVqbKnG6CLkcrrRg$J610doihM8R22ohv5MLm278UfUE+kaLZGHcUgzk3dio=",
+        "last_login": "2025-10-28T13:44:23.991Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-20T14:37:51.670Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$6XS7t8nM5aqopD2wPbVGvA$hyDMB79/0smPGEXMt8cEaz9tfpD+0QdGFmKulkRWqO0=",
+        "last_login": "2025-10-28T08:52:08.159Z",
+        "is_superuser": false,
+        "username": "alex",
+        "first_name": "",
+        "last_name": "",
+        "email": "alexuk@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-10-28T08:47:08.511Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$CZpnvMIXku86iMeb6AR3nI$K2aKmjqoQmepDC76v25VwLxYqe/8isjVLfG3fpo9pKQ=",
+        "last_login": "2025-10-28T09:24:08.226Z",
+        "is_superuser": false,
+        "username": "khasan",
+        "first_name": "",
+        "last_name": "",
+        "email": "khasan@micro.uz",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-10-28T08:57:11.573Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$eYJchAwrJV5hax3PjiB9HV$mGMNBMK7mQoxL6DyYHzvvJAfoB0q3ncw0F82uE+4+TU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "khasan12",
+        "first_name": "",
+        "last_name": "",
+        "email": "khasan@micro.uz",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-10-28T09:15:27.343Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-10-21T08:29:17.912Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-10-21T08:30:01.768Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Механические часы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-10-21T08:30:34.119Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Механические",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-10-21T08:30:54.089Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Електронные",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-10-21T08:33:59.898Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Всё",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-10-21T08:34:09.850Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Женское",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-10-21T08:45:02.513Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "Стать",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-10-21T08:45:09.394Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Женское",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-10-21T08:45:23.399Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "Мужское",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-10-21T08:46:01.704Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "Пол",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-10-21T08:46:10.193Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-10-21T08:46:57.098Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "Товары",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-10-21T08:47:05.775Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-10-21T08:48:04.093Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "Мужское",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-10-21T08:48:04.093Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "Пол",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-10-21T08:48:04.093Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Женское",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-10-21T08:48:30.841Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "Товары",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-10-21T08:48:36.140Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-10-21T08:48:47.990Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "Товары",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-10-21T08:48:47.990Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Всё",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-10-21T08:49:02.004Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "Сумки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-10-21T08:49:20.723Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "10",
+        "object_repr": "Одежда",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-10-21T08:50:05.384Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "Сумки",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-10-21T08:50:17.072Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "11",
+        "object_repr": "Аксесуары",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-10-22T14:16:56.383Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы наручные Longines",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (1)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-10-22T14:36:18.895Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы наручные Longines",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0432\\u0435\\u0442/\\u041c\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043b\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-10-23T11:44:04.436Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "10",
+        "object_repr": "Одежда",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-10-23T11:44:04.436Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "Сумки",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-10-23T11:45:02.860Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "12",
+        "object_repr": "Обувь",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-10-23T11:45:12.907Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "11",
+        "object_repr": "Аксесуары",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-10-23T12:02:17.091Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-10-23T12:02:21.859Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-10-23T12:02:28.895Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Часы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-10-24T12:59:20.603Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Очки dirol",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (2)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-10-24T13:00:00.851Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "13",
+        "object_repr": "Очки",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-10-24T13:00:18.766Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "category"
+        ],
+        "object_id": "14",
+        "object_repr": "Фотоапарат",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-10-24T13:01:08.394Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "Фотоапарат Sony",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (3)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-10-25T15:04:26.608Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Часы наручные Logan 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-10-25T15:04:46.369Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Часы наручные Logan 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (4)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-10-25T15:05:16.934Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "6",
+        "object_repr": "Часы наручные Logan 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (5)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-10-25T15:08:23.461Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "pspsps",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-10-25T15:08:51.794Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "8",
+        "object_repr": "fdfdfd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-10-25T15:09:09.976Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "9",
+        "object_repr": "sdsdsd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-10-25T15:12:51.177Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "9",
+        "object_repr": "sdsdsd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-10-25T15:12:51.177Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "8",
+        "object_repr": "fdfdfd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-10-25T15:12:51.177Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "7",
+        "object_repr": "pspsps",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-10-26T15:40:45.136Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Часы наручные Logan 2",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (6)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (7)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (8)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-10-26T15:43:29.216Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "shop",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Часы наручные Logan 2",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"Gallery object (None)\"}}]"
+    }
+}
+]

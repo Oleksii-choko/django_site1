@@ -1,14 +1,15 @@
 from itertools import product
 from symtable import Class
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.template.context_processors import request
 from django.views.generic import ListView, DetailView
-from django.contrib.auth import login,logout
+from django.contrib.auth import login, logout
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import Category, Product, ContactMessage
-from .forms import LoginForm,RegistrationForm, ContactForm
+from .models import Category, Product, ContactMessage, FavouriteProducts
+from .forms import LoginForm, RegistrationForm, ContactForm
 
 
 class Index(ListView):
@@ -59,18 +60,22 @@ class SubCategories(ListView):
         context['title'] = parent_category.title
         return context
 
+
 def about_us(request):
     """Страница про нас"""
     context = {
         'title': 'Про нас'
     }
     return render(request, 'shop/about.html', context)
+
+
 def contact_us(request):
     """Страница про нас"""
     context = {
         'title': 'Контакти'
     }
     return render(request, 'shop/contact.html', context)
+
 
 class ProductPage(DetailView):
     """Вывод товара на отдельной странице"""
@@ -88,15 +93,17 @@ class ProductPage(DetailView):
         context['products'] = products
         return context
 
+
 def login_regіstration(request):
     context = {"title": 'Войти или зарегистрироваться',
-               'login_form':LoginForm,
-               'registration_form':RegistrationForm}
+               'login_form': LoginForm,
+               'registration_form': RegistrationForm}
 
     return render(request, 'shop/login_registration.html', context)
 
+
 def user_login(request):
-    form  = LoginForm(data=request.POST)
+    form = LoginForm(data=request.POST)
     if form.is_valid():
         user = form.get_user()
         login(request, user)
@@ -106,10 +113,10 @@ def user_login(request):
         return redirect('login_registration')
 
 
-
 def user_logout(request):
     logout(request)
     return redirect('index')
+
 
 def user_registration(request):
     form = RegistrationForm(data=request.POST)
@@ -121,6 +128,7 @@ def user_registration(request):
             messages.error(request, form.errors[error].as_text())
         # messages.error(request, 'Что-то пошло не так')
     return redirect('login_registration')
+
 
 def user_contact(request):
     if request.method == 'POST':
@@ -137,3 +145,36 @@ def user_contact(request):
     else:
         form = ContactForm()
     return render(request, 'shop/contact.html', {'form': form, 'title': 'Контакты'})
+
+
+def save_favourite_product(request, product_slug):
+    """Добавление или удаление товара из избранных"""
+    next_page = request.META.get('HTTP_REFERER', 'index')
+    if request.user.is_authenticated:
+        user = request.user
+        product = Product.objects.get(slug=product_slug)
+        favourite_products = FavouriteProducts.objects.filter(user=user)
+
+        if product in [i.product for i in favourite_products]:
+            fav_product = FavouriteProducts.objects.get(user=user, product=product)
+            fav_product.delete()
+        else:
+            FavouriteProducts.objects.create(user=user, product=product)
+
+        next_page = request.META.get('HTTP_REFERER', 'index')
+    return redirect(next_page)
+
+class FavoriteProductsView(LoginRequiredMixin, ListView):
+    """Для Вывода избранных на страничку"""
+    model = FavouriteProducts
+    context_object_name = 'products'
+    template_name = 'shop/favorite_products.html'
+    login_url = 'user_registration'
+
+
+    def get_queryset(self):
+        """Получаем товары конкретного пользователя"""
+        favs = FavouriteProducts.objects.filter(user=self.request.user)
+        products = [i.product for i in favs]
+        return products
+

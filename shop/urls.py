@@ -5,6 +5,7 @@ urlpatterns = [
     path('', Index.as_view(), name='index'),
     path('category/<slug:slug>/', SubCategories.as_view(), name='category_detail'),
     path('product/<slug:slug>/', ProductPage.as_view(), name='product_page'),
+    path('user_favorits/', FavoriteProductsView.as_view(), name='favorite_user_page'),
 
     path('about_us/', about_us, name='about_us'),
     path('contact_us/', user_contact, name='contact_us'),
@@ -12,4 +13,5 @@ urlpatterns = [
     path('login/', user_login, name='user_login'),
     path('logout/', user_logout, name='user_logout'),
     path('register/', user_registration, name='user_registration'),
+    path('add_favourite/<slug:product_slug>/', save_favourite_product, name='add_favourite' ),
 ]

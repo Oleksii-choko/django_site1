@@ -1,5 +1,5 @@
 from django import template
-from shop.models import Category
+from shop.models import Category, FavouriteProducts
 
 register = template.Library()
 
@@ -38,3 +38,10 @@ def get_sorted():
         }
     ]
     return sorters
+
+@register.simple_tag()
+def get_favourite_products(user):
+    """Вывод избранных товаров на страничку"""
+    fav = FavouriteProducts.objects.filter(user=user)
+    products = [i.product for i in fav]
+    return products

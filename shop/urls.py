@@ -7,6 +7,7 @@ urlpatterns = [
     path('product/<slug:slug>/', ProductPage.as_view(), name='product_page'),
 
     path('about_us/', about_us, name='about_us'),
+    path('contact_us/', user_contact, name='contact_us'),
     path('login-registration/', login_regіstration, name='login_registration'),
     path('login/', user_login, name='user_login'),
     path('logout/', user_logout, name='user_logout'),

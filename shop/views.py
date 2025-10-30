@@ -1,4 +1,5 @@
 from itertools import product
+from symtable import Class
 
 from django.shortcuts import render, redirect
 from django.template.context_processors import request
@@ -6,8 +7,8 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth import login,logout
 from django.contrib import messages
 
-from .models import Category, Product
-from .forms import LoginForm,RegistrationForm
+from .models import Category, Product, ContactMessage
+from .forms import LoginForm,RegistrationForm, ContactForm
 
 
 class Index(ListView):
@@ -64,6 +65,12 @@ def about_us(request):
         'title': 'Про нас'
     }
     return render(request, 'shop/about.html', context)
+def contact_us(request):
+    """Страница про нас"""
+    context = {
+        'title': 'Контакти'
+    }
+    return render(request, 'shop/contact.html', context)
 
 class ProductPage(DetailView):
     """Вывод товара на отдельной странице"""
@@ -114,3 +121,19 @@ def user_registration(request):
             messages.error(request, form.errors[error].as_text())
         # messages.error(request, 'Что-то пошло не так')
     return redirect('login_registration')
+
+def user_contact(request):
+    if request.method == 'POST':
+        form = ContactForm(data=request.POST)
+        if form.is_valid():
+            ContactMessage.objects.create(
+                name=form.cleaned_data['name'],
+                email=form.cleaned_data['email'],
+                subject=form.cleaned_data['subject'],
+                message=form.cleaned_data['message'],
+            )
+            messages.success(request, 'Спасибо! Сообщение отправлено.')
+            return redirect('contact_us')
+    else:
+        form = ContactForm()
+    return render(request, 'shop/contact.html', {'form': form, 'title': 'Контакты'})

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Gallery
+from .models import Product, Category, Gallery, ContactMessage
 from django.utils.safestring import mark_safe  # для отображение изображения в хтмл тега
 
 
@@ -39,5 +39,12 @@ class ProductAdmin(admin.ModelAdmin):
             return '-'
 
     get_photo.short_description = 'Миниатюра'
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'email', 'subject', 'created_at', 'is_processed')
+    list_filter = ('is_processed', 'created_at')
+    search_fields = ('name', 'email', 'subject', 'message')
+    readonly_fields = ('created_at',)
 
 admin.site.register(Gallery)

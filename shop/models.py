@@ -72,3 +72,14 @@ class Gallery(models.Model):
     class Meta:
         verbose_name = 'Изображение'
         verbose_name_plural = 'Галерея товаров'
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Контактное имя')
+    email = models.EmailField(verbose_name='Почта')
+    subject = models.CharField(max_length=150,verbose_name='Тема')
+    message = models.TextField(verbose_name='Сообщение')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания сообщения')
+    is_processed = models.BooleanField(default=False, verbose_name='Состояние')
+    class Meta:
+        verbose_name = 'Сообщение'
+        verbose_name_plural = 'Сообщения'

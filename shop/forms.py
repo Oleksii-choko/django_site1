@@ -22,3 +22,11 @@ class RegistrationForm(UserCreationForm):
         fields = ('username', 'email')
         widget = {'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Имя пользователя'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Почта'}) }
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100, label='Імя')
+    email = forms.EmailField(label='Почта')
+    subject = forms.CharField(max_length=100, label='Тема')
+    message = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control', 'placeholder': 'Ваше сообщение...'}),
+                              label='Сообщение')
+

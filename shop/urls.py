@@ -14,4 +14,6 @@ urlpatterns = [
     path('logout/', user_logout, name='user_logout'),
     path('register/', user_registration, name='user_registration'),
     path('add_favourite/<slug:product_slug>/', save_favourite_product, name='add_favourite' ),
+    path('save_email/',save_subscribers, name='save_subscribers'),
+    path('send_mail/', send_email_to_subscribers, name='send_mail'),
 ]

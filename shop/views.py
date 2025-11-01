@@ -1,14 +1,16 @@
 from itertools import product
 from symtable import Class
 
+import django.db.utils
 from django.shortcuts import render, redirect, get_object_or_404
 from django.template.context_processors import request
 from django.views.generic import ListView, DetailView
 from django.contrib.auth import login, logout
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.utils import IntegrityError
 
-from .models import Category, Product, ContactMessage, FavouriteProducts
+from .models import Category, Product, ContactMessage, FavouriteProducts, Mail
 from .forms import LoginForm, RegistrationForm, ContactForm
 
 
@@ -164,6 +166,7 @@ def save_favourite_product(request, product_slug):
         next_page = request.META.get('HTTP_REFERER', 'index')
     return redirect(next_page)
 
+
 class FavoriteProductsView(LoginRequiredMixin, ListView):
     """Для Вывода избранных на страничку"""
     model = FavouriteProducts
@@ -171,10 +174,40 @@ class FavoriteProductsView(LoginRequiredMixin, ListView):
     template_name = 'shop/favorite_products.html'
     login_url = 'user_registration'
 
-
     def get_queryset(self):
         """Получаем товары конкретного пользователя"""
         favs = FavouriteProducts.objects.filter(user=self.request.user)
         products = [i.product for i in favs]
         return products
 
+
+def save_subscribers(request):
+    """СОбрать почтовых адресов"""
+    email = request.POST.get('email')
+    user = request.user if request.user.is_authenticated else None
+    if email:
+        try:
+            Mail.objects.create(mail=email, user=user)
+        except IntegrityError:
+            messages.error(request, 'Вы уже являетесь подписчиком')
+
+    return redirect('index')
+
+
+def send_email_to_subscribers(request):
+    """Отправка писем пользователям"""
+    from conf import settings
+    from django.core.mail import send_mail
+    if request.method == 'POST':
+        text = request.POST.get('text')
+        mail_lists = Mail.objects.all()
+        for email in mail_lists:
+            send_mail(
+                subject="У нас новая акция",
+                message=text,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[email],
+                fail_silently=False,
+            )
+    context = {'title':'Спамер'}
+    return render(request,'shop/_send_email.html', context)

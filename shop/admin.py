@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Gallery, ContactMessage
+from .models import Product, Category, Gallery, ContactMessage, Mail
 from django.utils.safestring import mark_safe  # для отображение изображения в хтмл тега
 
 
@@ -30,6 +30,7 @@ class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('title', 'price')
     list_display_links = ('title', 'pk')
+    readonly_fields = ('watched',)
     inlines = (GalleryInline, )
 
     def get_photo(self, obj):   # для отображение миниатюры
@@ -48,3 +49,8 @@ class ContactMessageAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at',)
 
 admin.site.register(Gallery)
+@admin.register(Mail)
+class ReviewMail(admin.ModelAdmin):
+    """Почтовые подписки"""
+    list_display = ('pk','mail','user')
+    readonly_fields = ('mail','user')
